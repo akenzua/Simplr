@@ -1,0 +1,249 @@
+
+
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Raleway|Open+Sans|Bad+Script|Fredericka+the+Great|Montserrat';
+/*@import 'https://fonts.googleapis.com/css?family=Pacifico';*/
+
+/*font-family: 'Crimson Text', serif;
+font-family: 'Allerta', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;*/
+/*font-family: 'Pacifico', cursive;*/
+/*font-family: 'Open Sans', sans-serif;*/
+
+
+body{
+    padding-top: 50px;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    
+}
+p, span{
+    font-family: 'Raleway', sans-serif;
+}
+.banner img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 75%;
+}
+
+
+.navbar{
+    border-radius: 0;
+    border: 0;
+}
+/**  Header Navigation **/
+
+header .navbar {
+  padding:  0;
+}
+
+header .navbar-default {
+  background: white;
+  border-bottom: 1px solid 	#D3D3D3;
+  
+}
+.navbar-btn{
+   font-family: 'Open Sans', sans-serif; 
+   color: grey;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 0.95em;
+   font-weight: 500;
+}
+header .navbar-default .navbar-nav a {
+  color: grey;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95em;
+  
+}
+
+header .navbar-default .navbar-nav a:hover {
+  color: #D79500;
+}
+
+/*header .navbar-default .navbar-nav .active a {
+  font-weight: 700;
+  color: #D79500;
+  background: transparent;
+  border-bottom: 2px solid  #D79500;;
+  text-shadow: none;
+}*/
+.navbar-header .navbar-brand {
+    color: #D79500;
+    font-size: 1.8em;
+    font-family: 'Fredericka the Great', cursive;
+/*    padding: 10px 40px 5px 5px;*/
+    margin-bottom: 10px;
+
+}
+.navbar-header .navbar-brand .subhead{
+    
+    font-family: 'Bad Script', cursive;
+    font-size: 0.7em;
+    display: block;
+    
+}
+/*
+.navbar-header .navbar-brand a:hover {
+    color: #D79500;;
+}
+*/
+.navbar-toggle {
+    color: #D79500;
+}
+/*
+header .navbar-default .navbar-nav .active a:hover {
+  color: #D79500;;
+  background: transparent;
+  text-shadow: none;
+  font-weight: 100;
+  border-bottom: 1px solid  #D79500;;
+}
+*/
+/*Homepage Section*/
+
+
+.page{
+    margin-top: 70px;
+    margin-bottom: 100px;
+/*    padding: 0;*/
+    
+    
+    
+}
+.page .row{
+     padding-top: 0;
+    
+}
+.page hr {
+    border: 1px solid #d79500;
+}
+
+/*Professionals*/
+.prof {
+    padding: 0;
+}
+.professional{
+    font-weight: 700;
+    text-align: right;
+}
+.professional .desc{
+    display: block;
+    color:#d79500;
+    
+}
+.weAre{
+    padding-top: 0;
+}
+.weAre p{
+    text-align: right;
+}
+
+/*Services*/
+
+.lgClass{
+    color:#D3D3D3;
+    font-size: 5em;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+.serv {
+    padding: 0;
+} 
+
+.services {
+    margin-top: 0px;
+    padding: 0;
+}
+.servDesc{
+    padding-left: 10px;
+}
+.servDesc p{
+    font-size: 0.8em;
+    margin-top: 30px;
+    border-left: 2px solid #d79500;
+    padding-left: 10px;
+    margin-bottom: 50px;
+    color: black;
+}
+.servDesc h4{
+    color: black;
+    font-weight: 400;
+    
+}
+
+.row [class*="col-"]{
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}
+
+.row{
+  overflow: hidden; 
+}
+.first{
+    margin-bottom: 50px;
+}
+.work {
+    background: #000000;
+}
+
+/* What we do*/
+
+.steps .num {
+    
+    color: #d79500;
+    font-size: 6em;
+    font-weight: 400;
+}
+.steps .content{
+    border-top: 2px solid #d79500;
+    padding-top: 5px;
+}
+.steps .content p {
+    color: #bdbdbd;
+    font-size: 0.75em;
+    padding-bottom: 10px;
+}
+ /* Blogs*/  
+.blogs h4{
+    font-weight: 600;
+}
+.blogs p{
+    color:black;
+    font-size: 0.85em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}  
+
+.blogs span{
+    font-size: 0.7em;
+}
+
+.blogs hr {
+    border: 1px solid #d3d3d3;
+    margin-bottom: 0;
+}
+.blogs .glyphicon{
+    color: #d79500;
+} 
+/* Footer*/
+footer{
+    background-image: url(../images/footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+    
+}
+footer .row{
+    background-color:  rgba(0, 0, 0, 0, 1);
+}
