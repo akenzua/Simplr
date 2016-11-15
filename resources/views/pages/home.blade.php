@@ -4,7 +4,7 @@
 
          @section('content')
         <div class="banner" id="featured">
-            <img  class="img-responsive" src="images/planning.jpg" alt="planning">
+            
             
         </div>
             
@@ -205,17 +205,21 @@
       <!--Blogs Start-->
       <div class="container-fluid page blogs" id="blogsId">
           <div class="row">
-              <div class="col-md-2 col-md-offset-3 col-sm-4">
+              <div class="col-md-2 col-md-offset-3 col-sm-4"><a href="/blogs/e-payment-eralding-a-new-age">
                   <img  class="img-responsive" src="images/blog1.jpeg" alt="blog1">
                   <h4>E-Payment: Eralding a New Age</h4>
+                   </a>
                   <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span><span>&nbsp;&nbsp;INVESTMENTS</span>
-                  <p>
+                  <p><a href="/blogs/e-payment-eralding-a-new-age">
                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                       Cras dapibus. Vivamus elementum semper nisi.  
+                      </a>
                   </p>
                   <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> &nbsp;<span>300</span>
                   <span class="dates pull-right">23rd September, 2016</span>
+
                   <hr>
+
               </div>
               <!-- First blog -->
               <div class="col-md-2 col-sm-4">

@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
+
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <script src="https://use.fontawesome.com/fb6da2cd8d.js"></script>
       <link rel="stylesheet" type="text/css" href="/css/app.css">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -51,7 +53,7 @@
             <div class="collapse navbar-collapse" id="collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="/#featured">HOME</a></li>
+                    <li><a href="/">HOME</a></li>
                       <li><a href="/#aboutId">ABOUT</a></li>
                       <li><a href="/#servicesId">SERVICES</a></li>
                       <li><a href="/#workId">HOW WE WORK</a></li>
