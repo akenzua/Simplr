@@ -27,14 +27,14 @@
         ]); ?>
     </script>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="80">
+
 <header>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navigation">
         <div class="container">
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse">
                     <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -55,9 +55,21 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/">HOME</a></li>
                       <li><a href="/#aboutId">ABOUT</a></li>
-                      <li><a href="/#servicesId">SERVICES</a></li>
+                      <li><a href="/services">SERVICES</a></li>
                       <li><a href="/#workId">HOW WE WORK</a></li>
-                      <li><a href="/#blogsId">BLOGS</a></li>
+                      <li><a href="/blogs" class="dropdown-toggle"
+                      data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BLOGS
+                      <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a href="/growthstrat">Growth Strategies</a></li>
+                          <li><a href="/startups">Start Up</a></li>
+                          <li><a href="/tech">Technology</a></li>
+                          <li><a href="/legal">Legal</a></li>
+                          <li><a href="/finance">Finance</a></li>
+                          <li><a href="/mns">Marketing & Sales</a></li>
+                      </ul>
+                      </li>
                         
                 </ul>
 

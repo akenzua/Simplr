@@ -37,8 +37,18 @@
       <!--Services Starts-->
           <div class="container-fluid services page" id="servicesId">
               <div class="rows">
-                  <div class="col-md-5 serv">
-                    <img  class="img-responsive" src="images/services.jpg" alt="services"> 
+
+                  <div class="row col-md-3 serv">
+                  <div class="col-md-10">
+                  <p class="dot1">.</p>
+                  <p class="dot2">.</p>
+                  <p class="dot3">.</p>
+
+                  <img  class="barcode" src="images/barcode.svg" alt="services">
+                    <img  class="coffee" src="images/coffee-black.svg" alt="services">
+                    <!-- <img  class="img-responsive" src="images/services.jpg" alt="services"> --> 
+                    <h5>Services</h5>
+                    </div>
                   </div><!--col-md-5 serv-->
                   <div class="col-md-7">
                       <div class="row servDesc">
@@ -81,209 +91,75 @@
       <!--How We Work Starts-->
       <div class="container-fluid page work" id="workId">
           <div class="row">
-              
+              @foreach($works as $work)
               
               <div class="col-md-3 col-sm-6">
+
                   <div class="row steps">
-                      <div class="col-md-3 ">
+                    
+                      <div class="col-xs-3 ">
                         <h1 class="num">
-                          01
+                          {{$work->id}}
                         </h1>
                       
                       </div>
-                      <div class="col-md-9"><br class="visible-lg visible-md"><br class="visible-lg visible-md"><br class="visible-lg visible-md"><br class="visible-lg visible-md"><br class="visible-lg visible-md"></div>
-                      <div class="col-md-3"></div>
-                      <div class="col-md-3"></div>
-                      <div class="col-md-9 content">
-                          <p>
-                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-                          </p>
-                          <p>
-                          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. 
-                          </p>
-                          <p>
-                          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. 
-                          </p>
-
+                      <div class="col-xs-9 workTitle">
+                      <h5>
+                      {{$work->title}}
+                      </h5>
                       </div>
-             
-                  </div>
-             
-              </div><!--col-md-2-->
-              
-              
-              
-              
-              <div class="col-md-3 col-sm-6">
-              <div class="row steps">
-                      <div class="col-md-3 ">
-                        <h1 class="num">
-                          02
-                        </h1>
                       
+                      <div class="col-xs-3"></div>
+                      <div class="col-xs-9 content">
+                          {!! $work->work !!}
                       </div>
-                      <div class="col-md-9"><br class="visible-lg visible-md"><br class="visible-lg visible-md"><br class="visible-lg visible-md"><br class="visible-lg visible-md"><br class="visible-lg visible-md"></div>
-                      <div class="col-md-3"></div>
-                      <div class="col-md-3"></div>
-                      <div class="col-md-9 content">
-                          <p>
-                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-                          </p>
-                          <p>
-                          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. 
-                          </p>
-                          <p>
-                          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. 
-                          </p>
-
-                      </div>
-             
+            
                   </div>
+            
               </div><!--col-md-2-->
-              <div class="col-md-3 col-sm-6">
-              <div class="row steps">
-                      <div class="col-md-3 ">
-                        <h1 class="num">
-                          03
-                        </h1>
-                      
-                      </div>
-                      <div class="col-md-9"><br class="visible-lg visible-md"><br class="visible-lg visible-md"><br class="visible-lg visible-md"><br class="visible-lg visible-md"><br class="visible-lg visible-md"></div>
-                      <div class="col-md-3"></div>
-                      <div class="col-md-3"></div>
-                      <div class="col-md-9 content">
-                          <p>
-                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-                          </p>
-                          <p>
-                          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. 
-                          </p>
-                          <p>
-                          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. 
-                          </p>
 
-                      </div>
-             
-                  </div>
-              </div><!--col-md-2-->
-              <div class="col-md-3 col-sm-6">
-              <div class="row steps">
-                      <div class="col-md-3 ">
-                        <h1 class="num">
-                          04
-                        </h1>
-                      
-                      </div>
-                      <div class="col-md-9"><br class="visible-lg visible-md"><br class="visible-lg visible-md"><br class="visible-lg visible-md"><br class="visible-lg visible-md"><br class="visible-lg visible-md"></div>
-                      <div class="col-md-3"></div>
-                      <div class="col-md-9 content">
-                          <p>
-                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-                          </p>
-                          <p>
-                          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. 
-                          </p>
-                          <p>
-                          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. 
-                          </p>
-
-                      </div>
-             
-                  </div>
-              </div><!--col-md-2-->
               
-              
+               @endforeach
           </div><!--row-->
        </div><!--container-fluid work page-->
      
       <!--How We Work Ends-->
       
-      
+     
+
+     
       
       
       
       <!--Blogs Start-->
       <div class="container-fluid page blogs" id="blogsId">
           <div class="row">
-              <div class="col-md-2 col-md-offset-3 col-sm-4"><a href="/blogs/e-payment-eralding-a-new-age">
-                  <img  class="img-responsive" src="images/blog1.jpeg" alt="blog1">
-                  <h4>E-Payment: Eralding a New Age</h4>
+           
+          @foreach ($blogHome as $blog)
+              <div class="col-md-2 off col-sm-4"><a href="/blogs/{{$blog->url}}">
+                  <img  class="img-responsive" src="{{$blog->image}}" alt="blog1">
+                  <h4>{{$blog->title}}</h4>
                    </a>
-                  <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span><span>&nbsp;&nbsp;INVESTMENTS</span>
-                  <p><a href="/blogs/e-payment-eralding-a-new-age">
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                      Cras dapibus. Vivamus elementum semper nisi.  
+                  <!-- <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span><span>&nbsp;&nbsp;INVESTMENTS
+
+                   </span> -->
+                  <p><a href="/blogs/{{$blog->url}}">
+                      {{$blog->excerpt}}  
                       </a>
                   </p>
-                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> &nbsp;<span>300</span>
-                  <span class="dates pull-right">23rd September, 2016</span>
+                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> &nbsp;<span>{{ $blog->comments->count() }}</span>
+                  <span class="dates pull-right">{{ $blog->created_at->format('F d, Y')}}</span>
 
                   <hr>
 
               </div>
-              <!-- First blog -->
-              <div class="col-md-2 col-sm-4">
-                <img  class="img-responsive" src="images/blog2.jpeg" alt="blog2">
-                <h4>Getting the Figures Right</h4>
-                  <span class="glyphicon glyphicon-stats" aria-hidden="true"></span><span>&nbsp;&nbsp;ANALYSIS</span>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                      Cras dapibus. 
-                  </p>
-                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> &nbsp;<span>38</span>
-                  <span class="dates pull-right">29th September, 2016</span>
-                  <hr>
-              </div> <!-- Second blog -->
-              <div class="col-md-2 col-sm-4">
-                <img  class="img-responsive" src="images/blog3.jpg" alt="blog3">
-                <h4>Making the Best of Your Bank</h4>
-                  <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span><span>&nbsp;&nbsp;MONEY</span>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                      Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. 
-                  </p>
-                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> &nbsp;<span>45</span>
-                  <span class="dates pull-right">30th September, 2016</span>
-                  <hr>
-              </div> <!-- Third blog -->
+               @endforeach
+               
+               
+
+
+               
               
-              <div class="col-md-2 col-md-offset-3 col-sm-4">
-                  <img  class="img-responsive" src="images/blog4.jpg" alt="blog1">
-                  <h4>Mobility in Business</h4>
-                  <span class="glyphicon glyphicon-cog" aria-hidden="true"></span><span>&nbsp;&nbsp;TECHNOLOGY</span>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                      Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. 
-                  </p>
-                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> &nbsp;<span>250</span>
-                  <span class="dates pull-right">3rd October, 2016</span>
-                  <hr>
-              </div>
-              <!-- Fourth blog -->
-              <div class="col-md-2 col-sm-4">
-                <img  class="img-responsive" src="images/blog5.jpeg" alt="blog5">
-                <h4>Business and Laws: 1</h4>
-                  <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span><span>&nbsp;&nbsp;LEGAL</span>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                      Cras dapibus. 
-                  </p>
-                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> &nbsp;<span>130</span>
-                  <span class="dates pull-right">15th October, 2016</span>
-                  <hr>
-              </div> <!-- Second blog -->
-              <div class="col-md-2 col-sm-4">
-                <img  class="img-responsive" src="images/blog6.jpg" alt="blog6">
-                <h4>Upgrade Yourself</h4>
-                  <span class="glyphicon glyphicon-education" aria-hidden="true"></span><span>&nbsp;&nbsp;INFORMATION</span>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                      Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. 
-                  </p>
-                  <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> &nbsp;<span>155</span>
-                  <span class="dates pull-right">17th October, 2016</span>
-                  <hr>
-              </div> <!-- Third blog -->
           
           </div><!-- First Sets of blogs -->
        </div><!--Page Blog-->

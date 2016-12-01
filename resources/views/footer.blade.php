@@ -32,19 +32,20 @@
                         <p>Marketing Plan</p>
                         <p>Business Planning Reviews</p>
                         <p>Business Model Design</p>
+                        <p>Slide Design</p>
                     </div>
 
                     
                 </div>
                 <div class="col-md-3 half">
-                <h3>helpful Links</h3>
+                <h3>Helpful Links</h3>
                     <div class="otherAddress">
                         <p>Blogs</p>
                         <p>Services</p>
                         <p>Business Contact List</p>
                         <p>Login / Register</p>
                         <p>About</p>
-
+                        <p>Jobs</p>
                         
                     </div>
                 
