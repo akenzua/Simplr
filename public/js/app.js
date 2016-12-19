@@ -59,4 +59,50 @@ $('.leftPop').hover(function(){
 // $('div.alldivs').children(2).addClass('col-md-offset-3');
 //   $(".item:first-child").addClass("anyclass");
 
+ $("#job").change(function() {
+        var val = $(this).val();
+        if (val == "busplan") {
+            $("#category").html("<option value=''>Select category</option><option value='120000'>Basic</option><option value='210000'>Standard</option><option value='300000'>Premuim</option>");
+        } else if (val == "busplanR") {
+            $("#category").html("<option value=''>Select category</option><option value='60000'>Basic</option><option value='90000'>Standard</option><option value='120000'>Premuim</option>");
+
+        } else if (val == "pitch") {
+            $("#category").html("<option value=''>Select category</option><option value='3000'>Basic</option><option value='4200'>Standard</option><option value='6000'>Premuim</option>");
+
+        }
+    });
+
+
+
+  
+  // $("#location").change(function(){
+  //   //var all = $(this).val();
+  //   var location = $('#location :selected').text();
+  //   if(location === 'Lagos'){
+  //   var all = 0;
+  // }else{
+  //   var all = 30000;
+  // }
+  // });
+  
+
+ $("#category").change(function(){
+  var charge = parseInt($(this).val());
+  locate = $('#location :selected').text();
+  if(locate === 'Lagos'){
+    var all = 0;
+  }else{
+    var all = 30000;
+  }
+
+  var total = all + charge;
+   if(charge){
+      $("#amount").html("Pay &#x20A6;" + total);
+      
+   }else if(!val){
+      $("#amount").html("Pay &#x20A6;xxx");
+   }
+ });
+
+
 });

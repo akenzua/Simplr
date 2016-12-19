@@ -36,10 +36,11 @@
       
       <!--Services Starts-->
           <div class="container-fluid services page" id="servicesId">
-              <div class="rows">
-
-                  <div class="row col-md-3 serv">
-                  <div class="col-md-10">
+              <div class="row main">
+                  <div class="row col-sm-5">
+                  
+                  <div class="col-sm-10 col-xs-10 serv">
+                 
                   <p class="dot1">.</p>
                   <p class="dot2">.</p>
                   <p class="dot3">.</p>
@@ -48,32 +49,37 @@
                     <img  class="coffee" src="images/coffee-black.svg" alt="services">
                     <!-- <img  class="img-responsive" src="images/services.jpg" alt="services"> --> 
                     <h5>Services</h5>
+                    
                     </div>
-                  </div><!--col-md-5 serv-->
-                  <div class="col-md-7">
+                    <div class="col-xs-2 col-sm-2 serviceSq">
+                       <img  class="" src="images/services.svg" alt="services">
+                    </div>
+                    
+                  </div>
+                  <div class="col-sm-7">
                       <div class="row servDesc">
-                          <div class="col-md-6 first">
+                          <div class="col-sm-6 first">
                               <h4>Business Planning</h4>
                                   <p>
                                       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
                                   </p>
                           
                           </div><!--Business Planning-->
-                          <div class="col-md-6 first">
+                          <div class="col-sm-6 first">
                               <h4>Marketing Plan</h4>
                               <p>
                                    Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. 
                               </p>
                           
                           </div><!--Marketing Plan-->
-                          <div class="col-md-6">
+                          <div class="col-sm-6">
                               <h4>Business Plan Review</h4>
                               <p>
                                       Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
                               </p>
                           
                           </div><!--Business Plan Review-->
-                          <div class="col-md-6">
+                          <div class="col-sm-6">
                               <h4>Feasibility Study</h4>
                               <p>
                                   Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.

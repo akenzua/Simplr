@@ -15,6 +15,12 @@ Route::get('/blogs', 'BlogsController@index');
 
 Route::get('/{slug}', 'BlogsController@cat');
 
-// Route::get('/blogs/e-payment-eralding-a-new-age', 'BlogsController@show');
+Route::get('/home/request', 'HomeController@prelim');
+
+Route::post('/home/pay', 'HomeController@pay');
+
+
 
 Route::get('/blogs/{url}', 'BlogsController@show');
+
+

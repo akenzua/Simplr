@@ -15,11 +15,11 @@ body{
     position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, thead {
     font-family: 'Open Sans', sans-serif;
     
 }
-p, span{
+p, span, td, li{
     font-family: 'Raleway', sans-serif;
 }
 .banner{
@@ -160,10 +160,11 @@ header .navbar-default .navbar-nav .active a:hover {
     min-height: 450px;
 } 
 .serv h5{
+  position: relative;
  transform: rotate(-90deg);
   transform-origin: top left 0;
-  margin-left: 50px;
-  margin-top: 110px;
+  left: 20%;
+  top: 110px;
   font-size: 1.8em;
   font-weight: 700;
   font-family: monospace;
@@ -175,8 +176,13 @@ header .navbar-default .navbar-nav .active a:hover {
     margin-top: 0px;
     padding: 0;
 }
+.services .main{
+  margin-right: 25px;
+  margin-right: 0;
+}
 .servDesc{
     padding-left: 10px;
+    
 }
 .servDesc p{
     font-size: 0.8em;
@@ -191,12 +197,15 @@ header .navbar-default .navbar-nav .active a:hover {
     font-weight: 400;
     
 }
+#servicesId{
+ 
+}
 .coffee{
   width: 80px;
   height: 80px;
   position: relative;
   top: 20px;
-  left: 90px;
+  left: 30%;
   
 }
 .barcode{
@@ -204,7 +213,7 @@ header .navbar-default .navbar-nav .active a:hover {
   height: 50px;
   position: relative;
   top: 190px;
-  left: 50px;
+  left: 20%;
   -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
@@ -221,18 +230,24 @@ header .navbar-default .navbar-nav .active a:hover {
 }
 .dot1{
   top: 30px;
-  left: 50px;
+  left: 20%;
 }
 
 .dot2{
   top: -20px;
-  left: 280px;
+  left: 80%;
 }
 
 .dot3{
   top:280px;
-  left: 280px;
+  left: 80%;
 
+}
+.serviceSq{
+margin-top: 100px;
+margin-left: -220px;
+z-index: -100;
+  
 }
 /*.row [class*="col-"]{
   margin-bottom: -99999px;
@@ -243,7 +258,7 @@ header .navbar-default .navbar-nav .active a:hover {
   overflow: hidden; 
 }
 .first{
-    margin-bottom: 50px;
+    
 }
 .work {
     background: #000000;
@@ -541,6 +556,7 @@ footer .opak{
 
   
 }
+
 /*Quote*/
 .quote{
   background-image: url(../images/blockquote.svg);
@@ -684,6 +700,70 @@ footer .opak{
   border-bottom: 1px solid #d3d3d3;
   font-size: 1.25em;
 }
+
+/*Service Page*/
+tr td:first-child, thead th:first-child{
+color: #d79500;
+font-weight: 700;
+text-align: left;
+}
+tr td, thead th{
+  text-align: center;
+}
+.price td{
+  border: none;
+  background: #fff;
+}
+.price td a, #request button{
+  background: #d79500;
+  color: #fff;
+  font-weight: 700;
+  
+}
+.price td a:hover, #request button:hover{
+  
+  color: black;
+}
+.servicePage h2{
+
+}
+
+/*dashboard*/
+.create{
+  background: #d7d7d7;
+  padding: 5px;
+}
+.create a{
+  text-decoration:  none;
+}
+.jobs{
+  margin-top: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d7d7d7;
+}
+#request{
+  margin-bottom: 200px;
+  border-bottom: 2px solid #d7d7d7;
+  padding-bottom: 30px;
+}
+.add{
+  text-align: left;
+}
+.form-control{
+  margin-bottom: 7px;
+}
+fieldset{
+  margin-bottom: 15px;
+}
+.pricing{
+  font-size: 0.8em;
+}
+
+
+
+
+
+
 
 @media (min-width: 768px) { 
   .blogsStrat, .startUp, .blogsTech, .blogsLegal, .blogsFin, .blogsMarkSal{
