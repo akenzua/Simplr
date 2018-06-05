@@ -1,6 +1,9 @@
 
          @extends('layouts.app')
-
+         @section('title_and_meta')
+          <title>{{ $blog->title}} | Simplr </title>
+          <meta name="description" content="{{ $blog->meta_description}}" />
+        @endsection
 
          @section('content')
 
@@ -44,25 +47,34 @@
          		</ul>
 									
          		</div><!-- Left Chevron Ends-->
-         		<div class="col-md-6 blog"> <!-- Main Blogs Content -->
+         		<div class="col-md-6 blog" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost"> <!-- Main Blogs Content -->
 	         		<div class="blogHeader">
-			         		<h1>{{ $blog->title}}</h1>
-                         @foreach($authors as $author)
-			         		<p>{{$author->name}}</p>
-                        @endforeach
+			         		<h1 itemprop="headline">{{ $blog->title}}</h1>
+                         
+			         		<p>
+                        {{$blog->author->name}}
+                                                </p>
+                        
 			         		<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span><span>&nbsp;&nbsp;
 
-                        {{ $category}}
+                        {{ $blog->category->category}}
                         </span>
 			         		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			         		<span class="glyphicon glyphicon-comment" aria-hidden="true"></span> &nbsp;<span>{{ $blog->comments->count() }}</span>
 
-			         		<span class="dates pull-right">{{ $blog->created_at->format('F d, Y') }}</span>
+			         		<span class="dates pull-right">{{ $blog->created_at->format('F d, Y') }}
+
+                        </span>
+                        <meta itemprop="datePublished" content="{{$blog->created_at->format('F d, Y')}}">
+                        <meta itemprop="dateModified" content="{{$blog->created_at->format('F d, Y')}}">
+                        <meta itemprop="publisher" content="Simplr Consulting">
+
+
 	         		</div>
-	         		<div class="blogImage">
-	         			<img  class="img-responsive" src="{{ $blog->image}}" alt="blog1">
+	         		<div class="blogImage" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+	         			<img  class="img-responsive" itemprop="name" src="{{ $blog->image}}" alt="blog1">
 	         		</div>
-	         		<div class="blogBody">
+	         		<div class="blogBody" itemprop="mainEntityOfPage">
 	         			
 	         			{!!$blog->content!!}
                      
@@ -134,26 +146,28 @@ s.setAttribute('data-timestamp', +new Date());
                         
          			</div><!-- Comment -->
 
-                  <div class="author row">
+                  <div class="author row" itemprop="author" itemscope itemtype="http://schema.org/Person">
 
                      <h3 class="">Author</h3>
                    
                         <div class="col-xs-3 col-sm-2">
                            
-                              <img  class="img-responsive" src="/images/passport5.jpg" alt="blog1">
+                              <img  class="img-responsive" itemprop="image" src="/images/passport5.jpg" alt="blog1">
+
                            </div>
                       
                         <div class="col-xs-9 col-sm-10 authorBox">
-                        @foreach($authors as $author)
-                           <span class="authorName">{{ $author->name }} {{ $author->title }}</span><br>
+                       
+                           <span class="authorName">{{ $blog->author->name }} {{ $blog->author->title }}</span><br>
+                           <meta itemprop="name" content="{{$blog->author->name }}">
                                                       
-                           <p class="">{{ $author->designation }}</p>
-                           <p>{{ $author->office }}</p>
-                           <i class="fa fa-twitter-square" aria-hidden="true"></i> &nbsp
-                           <i class="fa fa-facebook-square" aria-hidden="true"></i> &nbsp
+                           <p class="" itemprop="jobTitle">{{ $blog->author->designation }}</p>
+                           <p>{{ $blog->author->office }}</p>
+                           <i class="fa fa-twitter-square" aria-hidden="true"></i> &nbsp;
+                           <i class="fa fa-facebook-square" aria-hidden="true"></i> &nbsp;
                            <i class="fa fa-envelope" aria-hidden="true"></i>
 
-                           @endforeach
+                           
                            
                         </div>
                      

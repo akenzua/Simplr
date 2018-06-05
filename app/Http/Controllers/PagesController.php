@@ -18,30 +18,26 @@ class PagesController extends Controller
 {
     public function index(){
 
-    	// Array of Blog Listing on Homepage
-    	$blogCount = Blog::count();
-    	$lastCount = $blogCount - 5;
-		$countArray=[];
-
-    	for($i=$lastCount; $i<=$blogCount; $i++){
-    		$countArray[]=$i;
-    	}
-    	$blogHome = Blog::find([
-    		$countArray[0], $countArray[1], $countArray[2], $countArray[3], $countArray[4], $countArray[5]
-    		]);
-
+        // last 6 blog items
+        $blogHome = Blog::orderBy('id', 'desc')->take(6)->get();
+        
+        // All items in how it works
         $works = Work::all();
-       
-         
 
-    	// Array of Blog Listing on Homepage Ends
+        return view('pages.home', compact('blogHome', 'category', 'works'));
 
-    	return view('pages.home', compact('blogHome', 'category', 'works'));
+    }
 
-    	
+    public function verify(){
+        return view('pages.verify');
     }
 
 
+    public function confirm(){
+            return view('pages.confirm');
+        }
+
+        
     public function services(){
 
         return view('pages.services');

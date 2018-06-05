@@ -27,6 +27,7 @@
                       </div>
                       @endforeach
                     </div> 
+                    
 
                     <!-- Left and right controls -->
                     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

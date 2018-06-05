@@ -11,20 +11,12 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 class BlogsController extends Controller
-{
+{ 
 	public function index(){
 		 $blogs = Blog::all();
 		// return $blogs;
-        $blogCount = Blog::count();
-        $lastCount = $blogCount - 5;
-        $countArray=[];
-
-        for($i=$lastCount; $i<=$blogCount; $i++){
-            $countArray[]=$i;
-        }
-        $blogHome = Blog::find([
-            $countArray[0], $countArray[1], $countArray[2], $countArray[3], $countArray[4], $countArray[5]
-            ]);
+         // last 6 blog items
+         $blogHome = Blog::orderBy('id', 'desc')->take(6)->get();
 
 
         $growth = Blog::where('category_id', 1)->take(3)->orderBy('created_at', 'desc')->get();
@@ -39,10 +31,6 @@ class BlogsController extends Controller
 
 
 
-
-
-
-
     public function show($url){
  
     	$blog = Blog::where('url', $url)->firstOrFail();
@@ -52,14 +40,10 @@ class BlogsController extends Controller
         $previousId = $id - 1;
         $previous = Blog::find([$previousId]);
         
+        // dd($blog);
+
         
-
-        $category = \DB::table('categories')
-        ->where('id', $blog->category_id)
-        ->value('category'); //retrives blog category
-
-        $authors = \DB::table('authors')->where('id', $blog->author_id)->get();
-        return view('pages.show', compact('blog', 'category','authors', 'next', 'previous'));
+        return view('pages.show', compact('blog', 'next', 'previous'));
     	
     }
 
@@ -68,14 +52,25 @@ class BlogsController extends Controller
 
     public function cat($slug){
 
-        $cat = Category::where('slug', $slug)->firstOrFail();
+        $cat = Category::where('slug', $slug)->get();
 
-        foreach($cat->blog as $blog){
-            $blogId[]= $blog->id;
+        $category = $cat[0]->id;
+
+        $main = Blog::where('category_id', $category)->orderBy('created_at', 'asc')->take(1)->get();
+        // foreach($main as $main){
+        //     $main = $main->blogs;
+        //     return end($main);
+        // }
+
+        // $main = array_values(array_slice($main, -1))[0];
+
+        // return $main;
+
+        foreach($cat as $cat){
+            $cat = $cat->blogs;
         }
-        $main = Blog::find([
-            end($blogId)
-            ]);
-      return view('pages.cat', compact('cat', 'main', 'categories'));
+        
+        
+      return view('pages.cat', compact('cat', 'main'));
     }
 }

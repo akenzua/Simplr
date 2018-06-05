@@ -9,34 +9,49 @@
     <div class="row">
         <div class="col-md-3">
         @include('user.dashmenu')
-            
-
+          
 
         </div>
         <div class="col-md-7">
-        <form method="POST" action="/home/pay" id="request" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you agree with Simplr Consulting Terms of Service and Privacy Policy'); return false; }">
+
+        <form method="POST" action="/home/confirm" id="request" name="request">
         {{ csrf_field() }}
+       
             <fieldset>
                   <legend>Personal Information</legend>
+                  
+                    @if(count($errors))
+                    <div class="validate form-group">
+                      <ul>
+                        @foreach($errors->all() as $errors)
+
+                          <li>{{ $errors }}</li>
+
+                        @endforeach
+                      </ul>
+                      </div>
+                    @endif
+                  
 
                   <div class="form-group">
                       <label class="col-sm-2 control-label" for="firstName">Name</label>
                       <div class="col-sm-10">
-                        <input class="form-control" id="firstName" name="firstName" type="text" placeholder="{{$user->name}}" readonly>
+                        <input class="form-control" id="firstName"  type="text" placeholder="{{$user->name}}" readonly>
                       </div>
                   </div>
 
                   <div class="form-group">
                       <label class="col-sm-2 control-label" for="email">Email</label>
                       <div class="col-sm-10">
-                        <input class="form-control" id="email" name="email" type="text" placeholder="{{$user->email}}" readonly>
+                        <input class="form-control" id="email"  type="text" placeholder="{{$user->email}}" readonly>
                       </div>
                   </div>
 
+
                   <div class="form-group">
-                      <label class="col-sm-2 control-label"  for="phoneNumber">Phone</label>
+                      <label class="col-sm-2 control-label"  for="phone">Phone</label>
                       <div class="col-sm-10">
-                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone Number">
+                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone Number" value="{{ old('phone') }}" required>
                       </div>
                   </div>
 
@@ -44,7 +59,7 @@
                       <div class="form-group">
                       <label class="col-sm-2 control-label" for="address">Address</label>
                         <div class="col-sm-10">
-                          <textarea class="form-control" name="address"></textarea>
+                          <textarea class="form-control" name="address" required>{{ old('address') }}</textarea>
                         </div>
                       </div>
 
@@ -52,12 +67,12 @@
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="city">City</label>
                         <div class="col-sm-4">
-                          <input type="text" placeholder="City" id="city" name="city" class="form-control">
+                          <input type="text" placeholder="City" id="city" name="city" class="form-control" value="{{ old('city') }}" required>
                         </div>
 
                         <label class="col-sm-2 control-label" for="textinput">Country</label>
                         <div class="col-sm-4">
-                          <input class="form-control" id="country" name="country" type="text" placeholder="Nigeria" readonly>
+                          <input class="form-control" id="country" type="text" placeholder="Nigeria" readonly>
                         </div>
                       </div>
 
@@ -70,15 +85,16 @@
                  <div class="form-group">
                         <label class="col-sm-2 control-label" for="business">Business</label>
                         <div class="col-sm-10">
-                          <input type="text" placeholder="Business Name" name="business" class="form-control">
+                          <input type="text" placeholder="Business Name" name="business" class="form-control" value="{{ old('business') }}" required>
                         </div>
                  </div>
 
 
                  <div class="form-group">
-                      <label class="col-sm-2 control-label" for="firstName">Industry</label>
+                      <label class="col-sm-2 control-label" for="industry">Industry</label>
                       <div class="col-sm-4">
-                        <select class="form-control">
+                        <select class="form-control" id="industry" name="industry">
+                        <option value="" selected="selected">- Select -</option>
                           <option>Industry</option>
                           <option>Aviation</option>
                           <option>Real Estate</option>
@@ -89,7 +105,7 @@
 
                       <label class="col-sm-2 control-label" for="firstName">Location</label>
                       <div class="col-sm-4">
-                        <select class="form-control" id="location">
+                        <select class="form-control" id="location" name="location">
                            <option value="" selected="selected">- Select -</option>
                               <option value="Abuja FCT">Abuja FCT</option>
                               <option value="Abia">Abia</option>
@@ -133,9 +149,10 @@
                   </div>
 
                   <div class="form-group">
-                        <label class="col-sm-2 control-label" for="textinput">Registration</label>
+                        <label class="col-sm-2 control-label" for="registration">Registration</label>
                         <div class="col-sm-4">
-                         <select class="form-control">
+                         <select class="form-control" name="registration">
+                         <option value="" selected="selected">- Select -</option>
                           <option value="not registered">Not Registered</option>
                           <option value="enterprise">Business Name</option>
                           <option value="partnership">Partnership</option>
@@ -146,11 +163,13 @@
                           </select>
                         </div>
 
-                        <label class="col-sm-2 control-label" for="textinput">Is it a Startup?</label>
+                        <label class="col-sm-2 control-label" for="startup">Is it a Startup?</label>
                         <div class="col-sm-4">
-                          <select class="form-control">
-                          <option value="yes">Yes</option>
-                          <option value="no">No</option>
+
+                          <select class="form-control" name="startup">
+                          <option value="" selected="selected">- Select -</option>
+                          <option value="Yes">Yes</option>
+                          <option value="No">No</option>
                           
                           </select>
                         </div>
@@ -162,9 +181,9 @@
                 
             <fieldset>
                 <legend>Job Requested</legend>
-                <label class="col-sm-2 control-label" for="textinput">Service Required</label>
+                <label class="col-sm-2 control-label" for="service">Service Required</label>
                         <div class="col-sm-4">
-                         <select class="form-control"  id="job">
+                         <select class="form-control"  id="job" name="service">
                          <option value="">Select Services</option>
                           <option value="busplan">Business Plan</option>
                           <option value="busplanR">Business Plan Review</option>
@@ -174,16 +193,16 @@
                           </select>
                         </div>
 
-                        <label class="col-sm-2 control-label" for="textinput">Category</label>
+                        <label class="col-sm-2 control-label" for="category">Category</label>
                          <div class="col-sm-4">
-                        <select class="form-control" id="category">
+                        <select class="form-control" id="category" name="category">
                             <option value="">Select a Category </option>
                         </select>
                         </div>
                     
             </fieldset>
             <div class="pricing">
-                <p><input type="checkbox" name="checkbox" value="check" id="agree" />&nbsp; &nbsp; I agree to Simplr Consulting Terms of Service and Privacy Policy</p>
+                <p><input type="checkbox"  id="agree" name="agree" />&nbsp; &nbsp; I agree to Simplr Consulting Terms of Service and Privacy Policy</p>
 
                 <p>
                     Kindly note that the price comprises 60% of the charges and an additional &#x20A6;30,000 for business location outside Lagos. Please check the <a href="/services">service page</a> for a list of all our services &amp; prices.

@@ -1,31 +1,65 @@
 
          @extends('layouts.app')
-
+          @section('title_and_meta')
+          <title>Simplr Business Planning | Services </title>
+          <meta name="description" content="" />
+        @endsection
 
          @section('content')
-         <div class="category container servicePage">
+         <div class="servBanner">
+	         <div class="opaque">
+		         <div class="container">
+		         	<h2>We know where you are going .... we know how to get you there.</h2>
+		         	<h5>Home > Services</h5>
+		         </div>
+	         </div>
+         	
+         </div>
+         <div class="category container servicePage" itemscope itemtype="http://schema.org/Service">
+         
+          <span itemprop="provider" itemscope itemtype="http://schema.org/LocalBusiness">
+		    <meta itemprop="name" content="startup Consulting" />
+		    <meta itemprop="address" content="Lagos, Nigeria" />
+		    <meta itemprop="telephone" content="08023941474" />
+		 </span>
+		 
+		  <span itemprop="areaServed" itemscope itemtype="http://schema.org/State">
+		  <meta itemprop="name" content="Nigeria" />
+		   
+		  </span>
 	         <div class="row">
 	         	<div class="col-md-8">
-            
-	         		<h2>Services</h2>
-                <p>Preparing business document can be time consuming and distracting most especially for startups. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa</p>
-                <p>We render the following services to our clients:</p>
-                <ul class="list-unstyled">
-                <li >Business Planning</li>
-                <li>Business Planning Review</li>
-                <li>Pitch Deck Design</li>
-                <li>Market Research</li>
-                <li>Marekting Plan</li>
-                <li>Feasibilty Study</li>
-                <li>Slide Design</li>
-				</ul>            
+            	<meta itemprop="serviceType" content="Business Plan Writing" />
+	         		
+                <p>Preparing business document can be time consuming and distracting for startups. Most especially if such entrepreneur has not prepared such document before. The learning curve can be very steep. It could take away his focus from what really matters, waste his time and he might end up with a not so organized document. However, entrepreneurs can take advantage the wealth of experience of an organization such as ours to help them get it right the first time.</p>
+                <p>We do not just ask you a series of questions, and fill up a template; we proper advisory service and work you through a winning strategy.</p>
+                <p>At Simplr Consulting, we render the following services to startups:</p>
 
-				<h5>Business Planning</h5>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa</p>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa</p>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa</p>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut</p>
+                <ul id="servList" class="fa-ul"  itemscope itemtype="http://schema.org/OfferCatalog">
+				  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+					  <i class="fa-li fa fa-check-square" itemprop="itemOffered" itemscope itemtype="http://schema.org/Service"></i>		<span itemprop="name">Business Planning</span>
+				  </li>
+				  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+					  <i class="fa-li fa fa-check-square" itemprop="itemOffered" itemscope itemtype="http://schema.org/Service"></i>		<span itemprop="name">Business Planning Review</span>
+				  </li>
+				  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+					  <i class="fa-li fa fa-check-square" itemprop="itemOffered" itemscope itemtype="http://schema.org/Service"></i>		<span itemprop="name">Pitch Deck Design</span>
+				  </li>
+				   <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+					  <i class="fa-li fa fa-check-square" itemprop="itemOffered" itemscope itemtype="http://schema.org/Service"></i>		<span itemprop="name">Market Research</span>
+				  </li>
+				  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/Offer">
+					  <i class="fa-li fa fa-check-square" itemprop="itemOffered" itemscope itemtype="http://schema.org/Service"></i>		<span itemprop="name">Feasibilty Study</span>
+				  </li>
+				  
 
+				</ul>           
+
+				<h4><a name="businessplan"> Business Planning</a></h4>
+				<p>A business plan is like the screenplay of the life of your business in about 25 pages. It has it’s what, why, who, when, where and how. There are expectations, patterns, assumptions, strategies, and analysis that make the document compelling. </p>
+				 <p>We do not just write a business plan for you, we plan the business with you; we help you to complete your thought, fill knowledge gaps, develop business models, and design strategies. We will take preparing business plan out of your todo list, and we rightly do so.</p>
+				<p>We make business plan in categories as stated below, without compromise to quality.</p>
+				
 
 	         		<div class="table-responsive">
 	         		<table class="table table-hover table-striped">
@@ -156,18 +190,21 @@
 	         			<td> 21 days</td>
 	         			<td> 28 days</td>
 	         		</tr>
+
 	         		<tr class="price">
 	         			<td> </td>
 	         			<td><a class="btn btn-default" href="#" role="button">&#x20A6; 200,000</a> </td>
 	         			<td><a class="btn btn-default" href="#" role="button">&#x20A6; 350,000</a> </td>
 	         			<td><a class="btn btn-default" href="#" role="button">&#x20A6; 500,000</a> </td>
 	         		</tr>
+
 	         		</tbody>
   					
 					</table>
+					
 					</div>
 
-					<h5>Business Planning Review</h5>
+					<h4><a name="businessplanreview">Business Planning Review</a></h4>
 					<p>
 						Information on business plan are overtaken by events such as ever changing economic indices such as inflation rate, tax rate, interest rate; political environment, legal requirement, competition and so on. Hence the need to regularly update a plan.
 					</p>
@@ -200,7 +237,7 @@
   					
 					</table>
 					</div>
-					<h5>Pitch Deck</h5>
+					<h4>Pitch Deck</h4>
 					<p>If you’re raising money for your business, having an impressive pitch deck is a key component in your fundraising toolkit. A great pitch deck gets potential investors excited about your idea and engages them in a conversation about your business, hopefully leading to an investment.</p>
 					<div class="table-responsive">
 	         		<table class="table table-hover table-striped">

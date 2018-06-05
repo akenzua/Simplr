@@ -73,13 +73,17 @@ class RegisterController extends Controller
 
         Mail::to($user->email)->send(new ConfirmationEmail($user));
 
-        return back()->with('status', 'Please confirm your email address.');
+        //return back()->with('status', 'Please confirm your email address.');
+        return redirect('pages/verify');
     }
+
+    
 
     public function confirmEmail($token){
 
         User::whereToken($token)->firstOrFail()->hasVerified();
 
-        return redirect('login')->with('status', 'You are now confirmed. Please Login.');
+        //return redirect('login')->with('status', 'You are now confirmed. Please Login.');
+        return redirect('pages/confirm');
     }
 }

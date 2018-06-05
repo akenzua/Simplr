@@ -7,20 +7,22 @@
 	         <div class="row">
 	         	<div class="col-md-7">
             
-	         		<h3>{{$cat->category}}</h3>
+	         		<h3></h3>
                 
-             @foreach($main as $main)
+            
 	         		<div class="catImage">
+               @foreach($main as $main)
               <a href="/blogs/{{$main->url}}">
 		         		<img  class="img-responsive" src="{{$main->image}}" alt="blog1">
 		         		<h2><span>{{$main->title}}</span></h2>
                 </a>
+                @endforeach
 	         		</div>
-              @endforeach
+              
 	         		<div class="blogsStrat">
               
 	         		<div class="row">
-                     @foreach($cat->blog as $category)
+                     @foreach($cat as $category)
                       <div class="col-xs-12 col-md-4 cont">
                         <img  class="img-responsive col-xs-5 col-md-12" src="{{$category->image}}" alt="blog1">
                         <p class="col-xs-7 col-md-12">{{$category->title}}</p>
